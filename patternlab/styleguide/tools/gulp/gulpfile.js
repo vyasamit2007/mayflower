@@ -55,7 +55,7 @@ const defaults = {
 
 gulp.registry(new PatternLabRegistry(defaults, argv));
 gulp.registry(new NPMRegistry(defaults, argv));
-gulp.registry(new ArtifactsRegistry(defaults, argv));
+//gulp.registry(new ArtifactsRegistry(defaults, argv));
 
 // @todo: Do we need svg2twig?
 // @todo: Do we need the svg-sprite task?
