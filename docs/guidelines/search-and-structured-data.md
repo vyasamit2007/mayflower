@@ -75,7 +75,7 @@ Below is a summary of how each metatag is used in [search.mass.gov](https://sear
 
 | **Metatag** | **Sort Functionality** | **Example** |
 | --- | --- |
-| mg\_date | Used when sorting by date on the "news" and "laws-regulations" tabs. | ![Example Screenshot of Sort by Date Functionality](/docs/assets/mg_date.png.png) |
+| mg\_date | Used when sorting by date on the "news" and "laws-regulations" tabs. | ![Example Screenshot of Sort by Date Functionality](/docs/assets/mg_date.png) |
 
 #### Search Result Teasers
 
