@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import memoize from 'memoize-one';
+
 
 import UtilityNav from '../UtilityNav';
 import MainNav from '../../molecules/MainNav';
 import HeaderSearch from '../../molecules/HeaderSearch';
 import SiteLogo from '../../atoms/media/SiteLogo';
+import HeaderContext, { withHeader } from './context';
+
+const memoCheck = memoize((propsToCheck) => propsToCheck);
+let UtilityNavOpen;
+let UtilityNavClosed;
+let HeaderSearchWrapper;
 
 class Header extends Component {
   constructor(props) {
@@ -12,6 +20,36 @@ class Header extends Component {
     this.state = {
       utilNavOpen: false
     };
+    const headerUtilityNavProps = JSON.parse(JSON.stringify(this.props.utilityNav));
+    const headerUtilityNavOpen = { isOpen: true, ...headerUtilityNavProps };
+    const headerUtilityNavClosed = { isOpen: false, ...headerUtilityNavProps };
+    const allProps = {
+      utilityPropsOpen: headerUtilityNavOpen,
+      utilityPropsClosed: headerUtilityNavClosed,
+      headerSearchProps: this.props.headerSearch
+    };
+    const { utilityPropsOpen, utilityPropsClosed, headerSearchProps } = { ...memoCheck(allProps) };
+    // HOCs can not be defined in the render function because they will unmount and re-mount every render.
+    //UtilityNavOpen = withHeader(UtilityNav, utilityPropsOpen);
+    UtilityNavClosed = withHeader(UtilityNav, utilityPropsClosed);
+    HeaderSearchWrapper = withHeader(HeaderSearch, headerSearchProps);
+  }
+  static getDerivedStateFromProps(props, state) {
+    const headerUtilityNavProps = JSON.parse(JSON.stringify(props.utilityNav));
+    const headerUtilityNavOpen = { isOpen: true, ...headerUtilityNavProps };
+    const headerUtilityNavClosed = { isOpen: false, ...headerUtilityNavProps };
+
+    const allProps = {
+      utilityPropsOpen: headerUtilityNavOpen,
+      utilityPropsClosed: headerUtilityNavClosed,
+      headerSearchProps: props.headerSearch
+    };
+    const { utilityPropsOpen, utilityPropsClosed, headerSearchProps } = { ...memoCheck(allProps) };
+
+    //UtilityNavOpen = withHeader(UtilityNav, utilityPropsOpen);
+    UtilityNavClosed = withHeader(UtilityNav, utilityPropsClosed);
+    HeaderSearchWrapper = withHeader(HeaderSearch, headerSearchProps);
+    return state;
   }
   menuButtonClicked() {
     const bodyClass = document.querySelector('body').classList;
@@ -24,11 +62,13 @@ class Header extends Component {
   }
   render() {
     const header = this.props;
-    const utilNavOpen = { isOpen: this.state.utilNavOpen };
-    const HeaderUtilityNavProps = Object.assign({}, header.utilityNav, utilNavOpen);
-    const HeaderUtilityNav = <UtilityNav {...HeaderUtilityNavProps} />;
+    const HeaderUtilityNav = (this.state.utilNavOpen) ? UtilityNavOpen : UtilityNavClosed;
+    // const utilNavOpen = { isOpen: this.state.utilNavOpen };
+    // const HeaderUtilityNavProps = Object.assign({}, header.utilityNav, utilNavOpen);
+    // const HeaderUtilityNav = <UtilityNav {...HeaderUtilityNavProps} />;
 
     return(
+      <HeaderContext.Provider value={header}>
       <header className="ma__header" id="header">
         {!header.hideBackTo && (
           <div className="ma__header__backto">
@@ -36,7 +76,7 @@ class Header extends Component {
           </div>)}
         <a className="ma__header__skip-nav" href="#main-content">skip to main content</a>
         <div className="ma__header__utility-nav ma__header__utility-nav--wide">
-          {HeaderUtilityNav}
+          {(UtilityNavClosed) && (<UtilityNavClosed />)}
         </div>
         <div className="ma__header__container">
           <div className="ma__header__logo">
@@ -44,7 +84,7 @@ class Header extends Component {
           </div>
           {!header.hideHeaderSearch &&
           <div className="ma__header__search js-header-search-menu">
-            <HeaderSearch {...header.headerSearch} />
+            <HeaderSearchWrapper />
           </div>
           }
         </div>
@@ -65,7 +105,7 @@ class Header extends Component {
             {!header.hideHeaderSearch &&
             <div className="ma__header__nav-search">
               {!header.hideHeaderSearch &&
-                <HeaderSearch id="nav-search" />
+                <HeaderSearchWrapper id="nav-search" />
               }
             </div>
             }
@@ -73,11 +113,11 @@ class Header extends Component {
               <MainNav {...header.mainNav} />
             </div>
             <div className="ma__header__utility-nav ma__header__utility-nav--narrow">
-              {HeaderUtilityNav}
             </div>
           </div>
         </nav>
       </header>
+      </HeaderContext.Provider>
     );
   }
 }

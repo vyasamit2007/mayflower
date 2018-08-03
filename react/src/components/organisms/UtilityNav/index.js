@@ -7,7 +7,7 @@ import LatLonGlobe from '../../atoms/icons/LatLonGlobe/LatLonGlobe';
 import SvgBuilding from '../../atoms/icons/SvgBuilding';
 import SvgLogin from '../../atoms/icons/SvgLogin';
 
-class UtilityNav extends Component {
+class UtilityNav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
