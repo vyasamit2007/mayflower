@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {createNamedContext, Provider, subscribe} from 'react-contextual';
+import { createNamedContext, Provider, subscribe} from 'react-contextual';
 import memoizeOne from 'memoize-one';
-
+import { highlightUpdates } from 'react-highlight-updates';
 
 
 import UtilityNav from '../UtilityNav';
@@ -14,6 +14,10 @@ import HeaderContext from './context';
 class Header extends React.PureComponent {
   constructor(props) {
     super(props);
+    // @TODO: Remove before merging. Debug purposes ONLY.
+    // This makes it seem like updates are happening way more than the really are for some reason.
+    // This might be right, but unsure. console.log in component did update doesn't appear to fire when it should be.
+    highlightUpdates('rgba(0, 255, 0, 0.5)');
     this.state = {
       utilNavOpen: false
     };
