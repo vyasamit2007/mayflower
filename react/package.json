@@ -33,11 +33,14 @@
   "dependencies": {
     "@massds/mayflower": "^5.25.0",
     "autosuggest-highlight": "^3.1.1",
+    "memoize-one": "^4.0.0",
     "moment": "^2.21.0",
     "object.entries": "^1.0.4",
     "pikaday": "^1.7.0",
     "prop-types": "^15.6.0",
     "react-autosuggest": "^9.3.4",
+    "react-contextual": "^5.0.2",
+    "react-highlight-updates": "^1.0.0",
     "react-select": "^1.2.1",
     "shortid": "^2.2.8"
   },

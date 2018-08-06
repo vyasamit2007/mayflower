@@ -4,6 +4,8 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs, text, select, object, boolean } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
+import { highlightUpdates } from 'react-highlight-updates';
+
 
 import Header from './index';
 import HeaderDocs from './Header.md';
@@ -11,6 +13,8 @@ import SvgBuilding from '../../atoms/icons/SvgBuilding';
 import SvgLogin from '../../atoms/icons/SvgLogin';
 import MainNavData from '../../molecules/MainNav/MainNav.knob.options';
 import UtilityNavData from '../UtilityNav/UtilityNav.knob.options';
+
+highlightUpdates('rgba(0, 255, 0, 0.5)');
 
 storiesOf('organisms', module).addDecorator(withKnobs)
   .add('Header', withInfo(`<div>${HeaderDocs}</div>`)(() => {

@@ -5,7 +5,7 @@ import InputTextTypeAhead from '../../atoms/forms/InputTextTypeAhead';
 import SvgChevron from '../../atoms/icons/SvgChevron';
 import './style.css';
 
-class TypeAheadDropdown extends React.Component {
+class TypeAheadDropdown extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {

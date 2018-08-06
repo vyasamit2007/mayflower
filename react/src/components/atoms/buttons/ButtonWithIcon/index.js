@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SvgSearch from '../../icons/SvgSearch';
 import './style.css';
 
-class ButtonWithIcon extends React.Component {
+class ButtonWithIcon extends React.PureComponent {
   constructor(props) {
     super(props);
     this.setButtonRef = this.setButtonRef.bind(this);

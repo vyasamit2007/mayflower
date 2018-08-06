@@ -7,7 +7,7 @@ import LatLonGlobe from '../../atoms/icons/LatLonGlobe/LatLonGlobe';
 import SvgBuilding from '../../atoms/icons/SvgBuilding';
 import SvgLogin from '../../atoms/icons/SvgLogin';
 
-class UtilityNav extends Component {
+class UtilityNav extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,6 +20,9 @@ class UtilityNav extends Component {
   componentWillReceiveProps(nextProps) {
     const { isOpen } = nextProps;
     this.setState({ isOpen, navSelected: -1 });
+  }
+  componentDidUpdate() {
+    console.log('UtilityNav props: ', this.props);
   }
   onClick(divId, e) {
     e.preventDefault();

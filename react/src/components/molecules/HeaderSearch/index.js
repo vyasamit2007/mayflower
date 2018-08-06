@@ -4,7 +4,7 @@ import ButtonSearch from '../../atoms/buttons/ButtonSearch';
 import TypeAheadDropdown from '../../molecules/TypeAheadDropdown';
 import './HeaderSearch.css';
 
-class HeaderSearch extends React.Component {
+class HeaderSearch extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = { value: this.props.defaultText };
@@ -14,7 +14,9 @@ class HeaderSearch extends React.Component {
   componentWillReceiveProps(nextProps) {
     this.setState({ value: nextProps.defaultText });
   }
-
+  componentDidUpdate() {
+    console.log('HeaderSearch props: ', this.props);
+  }
   handleChange(event) {
     const query = event.target.value;
     this.setState({ value: query });
