@@ -5,4 +5,16 @@
   .ma__accordion-item:first-child {
     margin-top: 0px;
   }
+  .ma__accordion-header__button--secondary {
+    border-bottom: 0px;
+    border-top: 2px solid $c-gray-dcdcdc;
+    &.is-open{
+      border-bottom: 2px solid $c-gray-dcdcdc;
+    }
+  }
+  .ma__accordion-item--secondary:last-child {
+  	.ma__accordion-header__button--secondary {
+    	border-bottom: 2px solid $c-gray-dcdcdc;
+    }
+  }
 }

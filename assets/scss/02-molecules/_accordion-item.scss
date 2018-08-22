@@ -5,9 +5,13 @@
     &--borderless{
       border: none;
     }
-    &--secondary{
+    &--secondary {
      .ma__accordion-content__body {
           padding-left: 35px;
+          padding-top: 20px;
+        &.collapsed {
+          padding-top: 0px;
+        }
       }
     }
   }
@@ -19,7 +23,7 @@
       line-height: .65em;
       position: absolute;
         left: 5px;
-        top: 5px;
+        top: 10px;
       text-align: center;
       overflow: hidden;
       transform-origin: center center;
@@ -46,8 +50,13 @@
         position: relative;
         width: 100%;
         text-align: left;
+        padding: 0.5rem 0px 0.5rem 35px;
         border: none;
-        padding-left: 35px;
+        border-bottom: 2px solid $c-gray-dcdcdc;
+        border-top: 2px solid $c-gray-dcdcdc;
+        &--borderless {
+          border: none;
+        }
         &.is-open {
           .ma__accordion-header__icon--secondary {
             transform: rotate(0deg);
