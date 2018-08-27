@@ -32,13 +32,15 @@
     @include ma-container('restricted');
   }
 
-  &__section ~ &__section &__container:before {
+  &__section ~ &__section &__container::before {
     content: "";
     display: block;
 
     @media ($bp-large-min) {
       border-top-width: 1px;
       border-top-style: solid;
+      margin-bottom: $standard-spacing--small;
+      margin-top: $standard-spacing--small;
     }
   }
 

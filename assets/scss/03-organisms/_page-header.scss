@@ -7,9 +7,9 @@ $page-header-widget-width: 350px;
   &__tags {
     clear: both;
     display: flex;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
     overflow: hidden;
     margin-bottom: -20px;
     padding-top: 18px;
@@ -93,12 +93,12 @@ $page-header-widget-width: 350px;
     }
 
     @media ($bp-medium-min){
-      padding-top: $standard-spacing;
+      padding-top: $standard-spacing--large;
       padding-bottom: 45px;
     }
 
     @media ($bp-large-min){
-      padding-bottom: $standard-spacing;
+      padding-bottom: $standard-spacing--large;
     }
   }
 
@@ -141,7 +141,7 @@ $page-header-widget-width: 350px;
 
     @media ($bp-large-min){
       float: right;
-      padding-top: $standard-spacing;
+      padding-top: $standard-spacing--large;
       padding-bottom: 60px;
       width: $page-header-widget-width;
     }
@@ -225,7 +225,7 @@ $page-header-widget-width: 350px;
   }
 
   // Control font size and line height
-  // regardless of it's added to page 
+  // regardless of it's added to page
   &__sub-title,
   &__sub-title * {
     font-size: 1.625rem !important;
@@ -330,7 +330,7 @@ $page-header-widget-width: 350px;
     }
 
     @media ($bp-large-min){
-      padding-bottom:60px;
+      padding-bottom: $standard-spacing--large;
     }
 
     .ma__divider {

@@ -67,7 +67,7 @@
     margin-top: 40px;
 
     @media ($bp-small-min) {
-      margin-top: $standard-spacing;
+      margin-top: $standard-spacing--large;
     }
 
     &:first-child {
@@ -80,7 +80,7 @@
   padding-top: 40px;
 
   @media ($bp-small-min) {
-    padding-top: $standard-spacing;
+    padding-top: $standard-spacing--large;
   }
 
   @media ($bp-large-min){
