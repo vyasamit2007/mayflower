@@ -4,6 +4,10 @@
     @include ma-component-spacing;
   }
 
+  & > .pre-content + .main-content {
+    margin-top: 0;
+  }
+
   & > .ma__comp-heading {
     margin-bottom: 0;
   }
