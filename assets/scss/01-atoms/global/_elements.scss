@@ -14,11 +14,10 @@
 
 html {
   font-size: 14.5px;
-  
+
   @media ($bp-small-min){
     font-size: 16px;
   }
-  
 
   // .translated-rtl & {
   //   direction: rtl;
@@ -26,8 +25,7 @@ html {
 }
 
 body {
-  font-size: 1.375rem;
-  line-height: 1.5;
+  @include base-typography;
 
   // .translated-rtl & {
   //   direction: rtl;

@@ -25,7 +25,7 @@ $page-banner-height: 330px;
 
   &--overlay {
     @media ($bp-large-min) {
-      height: 400px;
+      height: 250px;
     }
 
     .ma__page-banner__content-wrapper {
@@ -51,10 +51,12 @@ $page-banner-height: 330px;
     overflow: hidden;
     height: auto;
     min-height: 240px;
+
     @media ($bp-large-extended) {
       max-height: none;
+
        &::after {
-        content: '';
+        content: "";
         display: block;
         height: 50vw;
         width: 100%;
@@ -69,16 +71,17 @@ $page-banner-height: 330px;
       left: 500px;
       background-size: cover;
       background-position: center;
+
       @media (min-width: $max-width) {
         right: calc(-100vw + #{$max-width});
       }
+
       @media ($bp-large-extended) {
         left: 0;
         top: 100%;
         height: 50vw;
       }
     }
-
   }
 
   &--linked &__container {
@@ -122,7 +125,7 @@ $page-banner-height: 330px;
   &--overlay &__container {
 
     &::before {
-      content: '';
+      content: "";
       height: 100%;
       left: 50%;
       position: absolute;
@@ -132,15 +135,15 @@ $page-banner-height: 330px;
   }
 
   &__content {
-    display: flex;
     align-items: center;
+    display: flex;
     flex-wrap: wrap;
     font-size: 1rem;
     max-width: 850px;
     max-height: 174px;
     padding: 30px 25px 45px 0;
-    z-index: 1;
     top: -50%;
+    z-index: 1;
 
     @media ($bp-x-small-min) {
       margin-right: 70px;
@@ -178,7 +181,7 @@ $page-banner-height: 330px;
   }
 
   &--small &__content {
-    font-size: .8rem;
+    font-size: 0.8rem;
     max-height: 100px;
     padding: 25px 25px 40px 0;
 
@@ -204,11 +207,12 @@ $page-banner-height: 330px;
   }
 
   &--overlay &__content {
+    max-width: 650px;
     padding: 25px 20px 25px 0;
 
     @media ($bp-x-small-min) {
-      transform: translateY(-50%);
       padding-right: 0;
+      transform: translateY(-50%);
     }
 
     &::before {
@@ -276,61 +280,19 @@ $page-banner-height: 330px;
   }
 
   &__title {
+    @include ma-h1;
     color: $c-font-inverse;
     flex-grow: 1;
-    font-size: 3rem;
     font-weight: 400;
-    line-height: 1.05;
     margin-bottom: 0;
     vertical-align: middle;
     z-index: 1;
 
-    @media ($bp-x-small-min) {
-      font-size: 3.25rem;
-    }
-
-    @media ($bp-small-min) {
-      font-size: 3.5rem;
-    }
-
-    @media ($bp-medium-min) {
-      font-size: 4rem;
-    }
-
-    @media ($bp-large-min) {
-      font-size: 4.625rem;
-    }
-
-    @media ($bp-x-large-min) {
-      font-size: 5.125rem;
-    }
-
     & > abbr {
-      font-size: .4em;
       border: none;
+      font-size: 0.4em;
       text-decoration: none;
     }
-  }
-
-  &--columns &__title,
-  &--large &__title,
-  &--small &__title {
-
-    @media ($bp-small-min) {
-      font-size: 3.25rem;
-    }
-
-    @media ($bp-large-min) {
-      font-size: 3.5rem;
-    }
-
-    @media ($bp-x-large-min) {
-      font-size: 3.875rem;
-    }
-  }
-
-  &--large &__title {
-    font-weight: 500;
   }
 
   &--overlay &__title {
@@ -361,10 +323,10 @@ $page-banner-height: 330px;
   .ma__decorative-link {
     display: block;
     font-size: 1.813rem;
-    letter-spacing: .02em;
+    letter-spacing: 0.02em;
     line-height: 2.188rem;
     margin-bottom: 0;
-    margin-top: .8em;
+    margin-top: 1.625rem;
     top: $page-banner-height;
 
     @media ($bp-large-min) {
@@ -401,13 +363,23 @@ $page-banner-height: 330px;
     @media ($bp-medium-min) {
       @include span-columns(4 of 12);
       font-size: 1.813rem;
-      letter-spacing: .02em;
+      letter-spacing: 0.02em;
       line-height: 2.188rem;
       padding-top: 100px;
       padding-right: 20px;
       position: relative;
       top: 0;
     }
+  }
+
+  &--overlay &__description {
+    max-width: 540px;
+  }
+
+  &__descriptionSubText {
+    @include base-typography;
+    display: block;
+    margin-top: 1.625rem;
   }
 
   &--columns &__image {
@@ -446,7 +418,7 @@ $page-banner-inner-width: 612px;
   }
 
   &__content {
-    background-image: linear-gradient(-90deg, rgba($c-theme-secondary, .7), $c-theme-secondary 95%);
+    background-image: linear-gradient(-90deg, rgba($c-theme-secondary,0.7), $c-theme-secondary 95%);
 
     &::before {
       background-color: $c-theme-secondary;
@@ -454,7 +426,7 @@ $page-banner-inner-width: 612px;
   }
 
   &--blue &__content {
-    background-image: linear-gradient(-90deg, rgba($c-theme-blue, .7), $c-theme-blue 95%);
+    background-image: linear-gradient(-90deg, rgba($c-theme-blue,0.7), $c-theme-blue 95%);
 
     &::before {
       background-color: $c-theme-blue;
@@ -482,12 +454,11 @@ $page-banner-inner-width: 612px;
       background-color: $c-theme-secondary;
     }
   }
+
   &--linked &__content {
     background-color: $c-theme-secondary;
     background-image: none;
   }
-
-
 
   &__icon {
 
@@ -500,11 +471,6 @@ $page-banner-inner-width: 612px;
   &__description {
     color: $c-font-inverse;
     font-weight: 500;
-
-    .ma__page-banner__descriptionSubText {
-      display: block;
-      font-weight: 300;
-    }
   }
 
   .ma__decorative-link {
