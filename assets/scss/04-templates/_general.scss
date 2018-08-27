@@ -128,15 +128,15 @@
 //theme
 .ma__narrow-template {
 
-  &--blue:before {
+  &--blue::before {
     background-color: rgba($c-theme-blue, .15);
   }
 
-  &--green:before {
+  &--green::before {
     background-color: rgba($c-theme-green, .15);
   }
 
-  &--yellow:before {
+  &--yellow::before {
     background-color: rgba($c-theme-yellow, .15);
   }
 }
