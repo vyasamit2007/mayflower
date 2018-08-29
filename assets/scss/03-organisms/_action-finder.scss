@@ -1,16 +1,16 @@
 $action-finder-bp: 900px;
 
 .ma__action-finder {
-  background-size: cover;
   background-position: top center;
+  background-size: cover;
   position: relative;
 
   &::after {
     content: "";
     height: 100%;
     position: absolute;
-      top: 0;
-      left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 1;
   }
@@ -18,15 +18,15 @@ $action-finder-bp: 900px;
   &--no-background {
     overflow: hidden;
 
-    &:after {
+    &::after {
       display: none;
     }
   }
 
   &__container {
     @include ma-container;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: $standard-spacing--large;
+    padding-bottom: $standard-spacing--large;
     position: relative;
     z-index: 2;
   }
@@ -37,7 +37,7 @@ $action-finder-bp: 900px;
 
   &__header {
     font-size: 0;
-    margin-bottom: 60px;
+    margin-bottom: $standard-spacing--large;
   }
 
   &--no-background &__header {
@@ -198,8 +198,8 @@ $action-finder-bp: 900px;
 }
 
 //theme
-$action-finder-bg-color: tint($c-theme-primary,89%);
-$action-finder-border-color: tint($c-theme-primary,50%);
+$action-finder-bg-color: tint($c-theme-primary, 89%);
+$action-finder-border-color: tint($c-theme-primary, 50%);
 
 .ma__action-finder {
 

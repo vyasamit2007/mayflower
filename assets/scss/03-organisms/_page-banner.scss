@@ -12,7 +12,7 @@ $page-banner-height: 330px;
 
   @media ($bp-x-small-min) {
     height: 350px;
-    margin-bottom: 40px;
+    margin-bottom: $standard-spacing--small;
   }
 
   &--small,
@@ -38,11 +38,11 @@ $page-banner-height: 330px;
     min-height: 350px;
 
     @media ($bp-medium-min) {
-      padding-top: 45px;
+      padding-top: $standard-spacing--small;
     }
 
     @media ($bp-large-min) {
-      margin-bottom: 70px;
+      margin-bottom: $standard-spacing--large;
     }
   }
 
@@ -141,7 +141,7 @@ $page-banner-height: 330px;
     font-size: 1rem;
     max-width: 850px;
     max-height: 174px;
-    padding: 30px 25px 45px 0;
+    padding: 30px 25px $standard-spacing--small 0;
     top: -50%;
     z-index: 1;
 
@@ -186,7 +186,7 @@ $page-banner-height: 330px;
     padding: 25px 25px 40px 0;
 
     @media ($bp-x-small-min) {
-      padding-top: 45px;
+      padding-top: $standard-spacing--small;
       padding-right: 80px;
     }
   }
@@ -373,12 +373,6 @@ $page-banner-height: 330px;
 
   &--overlay &__description {
     max-width: 540px;
-  }
-
-  &__descriptionSubText {
-    @include base-typography;
-    display: block;
-    margin-top: 1.625rem;
   }
 
   &--columns &__image {

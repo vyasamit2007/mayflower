@@ -2,13 +2,12 @@ $bp-illustrated-header-columns-min: "min-width: 1001px";
 $bp-illustrated-header-columns-max: "max-width: 1000px";
 $bp-illustrated-header-image-width: 360px;
 
-
 .ma__illustrated-header {
-  margin-bottom: 40px;
+  margin-bottom: $standard-spacing--small;
   position: relative;
 
   @media ($bp-illustrated-header-columns-min) {
-    margin: 60px 0;
+    margin: $standard-spacing--large 0;
   }
 
   .ma__page-header__title {
@@ -28,9 +27,10 @@ $bp-illustrated-header-image-width: 360px;
       background-position: center left;
       height: 100%;
       position: absolute;
-        top: 0;
-        right: 0;
-      width: $bp-illustrated-header-image-width + 40px; // 40px is right padding of the page
+      top: 0;
+      right: 0;
+      // 40px is right padding of the page.
+      width: $bp-illustrated-header-image-width + 40px;
     }
 
     @media ($bp-page-width-min) {
@@ -59,12 +59,12 @@ $bp-illustrated-header-image-width: 360px;
       min-height: 430px;
       width: calc(100% - #{$bp-illustrated-header-image-width}); // width of right rail
 
-      &:after {
+      &::after {
         content: "";
         height: 200%;
         position: absolute;
-          bottom: 0;
-          right: 0;
+        bottom: 0;
+        right: 0;
         transform: rotate(30deg);
         transform-origin: bottom right;
         width: 200%;
@@ -74,9 +74,7 @@ $bp-illustrated-header-image-width: 360px;
 
     @media ($bp-page-width-min) {
       width: 840px;
-
     }
-
   }
 
   &__category {
@@ -103,16 +101,19 @@ $bp-illustrated-header-image-width: 360px;
 }
 
 .ma__illustrated-header--inverted {
+
   .ma__illustrated-header__content::after {
     content: none;
   }
+
   .ma__page-header {
     width: 100%;
   }
+
   .ma__illustrated-header__content {
     display: flex;
-      flex-direction: column;
-      justify-content: center;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -136,7 +137,7 @@ $bp-illustrated-header-image-width: 360px;
   &__content {
     background-color: $c-white;
 
-    &:after {
+    &::after {
       background-color: $c-white;
     }
   }
@@ -144,20 +145,16 @@ $bp-illustrated-header-image-width: 360px;
   &__category {
     font-weight: 700;
   }
-
-  .ma__page-header {
-
-    &__intro {
-    }
-  }
 }
 
 .ma__illustrated-header--inverted {
-  &, 
+
+  &,
   .ma__page-header__title,
   .ma__illustrated-header__category {
     color: $c-white;
   }
+
   &,
   .ma__illustrated-header__content,
   .ma__illustrated-header__image--empty {

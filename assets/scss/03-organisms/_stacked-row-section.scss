@@ -31,7 +31,7 @@
     @media ($bp-large-min) {
       border-top-width: 1px;
       border-top-style: solid;
-      padding-top: 90px;
+      padding-top: $standard-spacing--small;
     }
   }
 
@@ -62,7 +62,7 @@
 
   & ~ & {
     border-color: $c-bd-divider;
-    
+
     &__container:before {
       border-color: $c-bd-divider;
     }

@@ -8,10 +8,6 @@
     white-space: nowrap;
   }
 
-  @media ($bp-medium-min) {
-    display: inline-flex;
-  }
-
   &__terms {
     display: inline;
     letter-spacing: 0;
@@ -113,7 +109,7 @@
   &__terms {
 
     a {
-      border-color: rgba($c-font-link,.2);
+      border-color: rgba($c-font-link, 0.2);
       font-weight: 500;
 
       &:hover {

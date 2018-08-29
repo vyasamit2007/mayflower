@@ -1,19 +1,17 @@
 .ma__link-list--image-blocks {
-  // grid stuff
+
+  // Grid stuff.
   .ma__link-list__items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-
-    @media ($bp-x-large-min) {
-      justify-content: flex-start;
-    }
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
 
     .ma__link-list__item {
-      flex-basis: 100%;
-      padding: 0;
-      margin-bottom: 1rem;
       display: none;
+      flex-basis: 100%;
+      margin-top: 1rem;
+      padding: 0 0.5rem;
 
       &.toggle-open {
         // Always show all when clicked open so they don't hide on screen resize.
@@ -26,22 +24,20 @@
       }
 
       @media($bp-medium-min) {
-        flex-basis: calc(50% - 0.5rem);
+        flex-basis: 50%;
+        width: 50%;
 
-        // Always show first 6 on tablet
+        // Always show first 6 on tablet.
         &:nth-child(-n+6) {
           display: list-item !important;
         }
       }
 
       @media($bp-x-large-min) {
-        // Always show all on desktop
+        // Always show all on desktop.
         display: list-item;
-        flex-basis: calc(33% - 1rem);
-
-        &:nth-child(3n+2) {
-          margin: 0 1.8rem 1rem;
-        }
+        flex-basis: 33.33%;
+        width: 33.33%;
       }
     }
   }

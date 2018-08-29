@@ -17,8 +17,8 @@
     padding-top: 30px;
 
     @media ($bp-large-min){
-      margin-top: 45px;
-      padding-top: 45px;
+      margin-top: $standard-spacing--small;
+      padding-top: $standard-spacing--small;
     }
 
     .sidebar & {
@@ -32,9 +32,9 @@
 
     @media($bp-medium-min) {
       display: flex;
-        flex-wrap: wrap;
-        justify-content: stretch;
-      margin: 0 -40px;
+      flex-wrap: wrap;
+      justify-content: stretch;
+      margin: 0 -($standard-spacing--small);
     }
   }
 
@@ -47,11 +47,11 @@
 
       .ma__press-teaser__image {
         display: none;
-      }      
+      }
     }
 
     @media($bp-medium-max) {
-      
+
       & + & {
         border-top-width: 1px;
         border-top-style: solid;
@@ -66,16 +66,16 @@
     }
 
     @media ($bp-medium-min) {
-
+      align-content: flex-start;
       border-right-style: solid;
       border-right-width: 1px;
       display: block;
-      align-content: flex-start;
       flex-shrink: 1;
       flex-grow: 0;
       flex-basis: 50%;
-      margin-top: 80px;
-      padding: 0 40px;
+      // 45px above and below the separator
+      margin-top: ($standard-spacing--small * 2);
+      padding: 0 $standard-spacing--small;
       position: relative;
 
       &:first-child,
@@ -84,13 +84,13 @@
         padding-top: 0;
       }
 
-      &:after {
+      &::after {
         border-top-style: solid;
         border-top-width: 1px;
         content: "";
         position: absolute;
-          bottom: -40px;
-          left: 0;
+        bottom: -($standard-spacing--small);
+        left: 0;
         width: calc(100% + 1px);
       }
 
@@ -102,20 +102,20 @@
     @media($bp-medium-min) and ($bp-large-max) {
 
       &:nth-child(2n+2) {
-        border-right: none;
+        border-right: 0;
       }
 
       &:last-child,
       &:nth-child(2n+1):nth-last-child(2) {
 
-        &:after {
+        &::after {
           display: none;
         }
       }
     }
 
     @media($bp-large-min) {
-      flex-basis: 33%;
+      flex-basis: 33.33%;
 
       &:nth-child(3) {
         margin-top: 0;
@@ -123,7 +123,7 @@
       }
 
       &:nth-child(3n+3) {
-        border-right: none;
+        border-right: 0;
       }
 
       &:last-child,
@@ -132,7 +132,7 @@
       &:nth-child(3n+1):nth-last-child(2),
       &:nth-child(3n+1):nth-last-child(2) ~ & {
 
-        &:after {
+        &::after {
           display: none;
         }
       }
@@ -143,7 +143,7 @@
     margin-top: 30px;
 
     @media ($bp-large-min) {
-      margin-top: 45px;
+      margin-top: $standard-spacing--small;
     }
   }
 }
@@ -158,7 +158,7 @@
   &__secondary-item {
     border-color: $c-bd-divider;
 
-    &:after {
+    &::after {
       border-color: $c-bd-divider;
     }
   }

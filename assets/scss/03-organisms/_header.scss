@@ -20,7 +20,6 @@ body {
   }
 }
 
-
 .ma__header {
   padding-top: 43px; // height of the util nav
   position: relative;
@@ -77,7 +76,6 @@ body {
     }
   }
 
-
   &__search {
     display: inline-block;
     text-align: right;
@@ -131,8 +129,8 @@ body {
       height: calc(100vh - #{$header-mobile-controls-height});
       overflow-y: auto;
       position: fixed;
-        top: 0;
-        right: -$header-mobile-menu-width;
+      top: 0;
+      right: -$header-mobile-menu-width;
       margin-top: $header-mobile-controls-height;
       transition: right 0.5s ease;
       width: $header-mobile-menu-width;
@@ -182,8 +180,8 @@ body {
     margin-left: 20px;
     padding-left: 20px;
     position: fixed;
-      top: 3px;
-      left: 100%; // hides the outline
+    top: 3px;
+    left: 100%; // hides the outline
     text-transform: uppercase;
     transition: left .5s, visibility .5s;
     visibility: hidden;
@@ -194,7 +192,7 @@ body {
       top: 43px;
     }
 
-    &:before {
+    &::before {
       border-left: 3px solid;
       border-top: 3px solid;
       content: "";
@@ -203,8 +201,8 @@ body {
       margin-top: 3px;
       margin-left: 3px;
       position: absolute;
-        left: 0;
-        top: 6px;
+      left: 0;
+      top: 6px;
       transform: rotate(-45deg);
       transform-origin: 75% 75%;
       vertical-align: middle;
@@ -247,18 +245,18 @@ body {
     width: 20px;
     top: 17px;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       cursor: pointer;
       content: '';
       display: block;
       height: 3px;
       position: absolute;
-        right: 0;
+      right: 0;
       transition: all 500ms ease-in-out;
       width: 20px;
     }
-    &:before {
+    &::before {
       top: -8px;
 
       .show-menu & {
@@ -266,7 +264,7 @@ body {
         transform: rotate(45deg);
       }
     }
-    &:after {
+    &::after {
       bottom: -8px;
 
       .show-menu & {
@@ -340,7 +338,7 @@ body {
       display: inline-block;
       padding: 6px 7px;
       position: fixed;
-        top: 0;
+      top: 0;
       white-space: nowrap;
 
       @media ($bp-x-small-max) {
@@ -349,14 +347,14 @@ body {
 
       @media ($bp-header-toggle-min){
         position: absolute;
-          top: -$header-mobile-controls-height - 4px;
+        top: -$header-mobile-controls-height - 4px;
       }
 
       @media ($bp-large-min) {
         padding: 7px 15px;
       }
 
-      &:before {
+      &::before {
         height: 9px;
         margin-right: .75em;
         margin-top: 0;
@@ -391,7 +389,7 @@ body {
     font-weight: 700;
     color: $c-font-inverse;
 
-    &:before {
+    &::before {
       border-left-color: $c-font-inverse;
       border-top-color: $c-font-inverse;
     }
@@ -413,8 +411,8 @@ body {
   &__menu-icon {
     background-color: $c-font-inverse;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       background-color: $c-font-inverse;
     }
 
@@ -422,12 +420,12 @@ body {
       background-color: transparent;
     }
 
-    &:before {
+    &::before {
       .show-menu & {
         background-color: $c-font-inverse;
       }
     }
-    &:after {
+    &::after {
       .show-menu & {
         background-color: $c-font-inverse;
       }

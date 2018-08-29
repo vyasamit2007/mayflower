@@ -3,18 +3,18 @@
   position: relative;
 
   @media ($bp-small-min) {
-    padding: 40px 0 50px;
+    padding: $standard-spacing--small 0;
   }
 
-  &__back2top{
+  &__back2top {
     @include ma-button("small");
     font-size: 1rem;
     letter-spacing: .1em;
     opacity: 1;
     padding: .5em .7em;
     position: fixed;
-      bottom: 1.3125rem;
-      right: 1.5625rem;
+    bottom: 1.3125rem;
+    right: 1.5625rem;
     transition: all .5s;
     visibility: visible;
     z-index: $z-sticky-content;
@@ -22,8 +22,8 @@
     @media ($bp-small-max) {
       padding: .4em .4em 0 .4em;
       position: fixed;
-        bottom: 1rem;
-        right: 1rem;
+      bottom: 1rem;
+      right: 1rem;
     }
 
     &.is-hidden {
@@ -127,7 +127,7 @@
   }
 
   &__social {
-    
+
     .ma__social-links {
 
       &__link {
@@ -135,7 +135,7 @@
 
         & > svg,
         & > svg path {
-          fill: $c-white;    
+          fill: $c-white;
         }
       }
     }

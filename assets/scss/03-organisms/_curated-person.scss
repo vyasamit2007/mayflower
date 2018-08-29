@@ -6,9 +6,9 @@
   }
 
   &--meta-wrapper {
+    color: $c-theme-gray;
     display: flex;
     font-style: italic;
-    color: $c-theme-gray;
 
     .curated-person--title {
       padding-right: 1rem;
@@ -22,7 +22,7 @@
 
   .ma__contact-us__content-wrap {
     border-bottom: 1px solid $c-bd-divider;
-    padding-bottom: 1rem;
+    padding-bottom: $standard-spacing--small;
 
     @media ($bp-large-min) {
       justify-content: space-between;
@@ -34,10 +34,10 @@
     border-left: 0;
 
     @media ($bp-small-min) {
-      width: 50%;
-      max-width: unset;
       min-width: unset;
+      max-width: unset;
       position: relative;
+      width: 50%;
 
       &:first-child::after {
         content: '';

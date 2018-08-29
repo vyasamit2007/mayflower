@@ -12,7 +12,7 @@ $page-header-widget-width: 350px;
     justify-content: space-between;
     overflow: hidden;
     margin-bottom: -20px;
-    padding-top: 18px;
+    padding-top: 20px;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     margin-bottom: 20px;
@@ -112,10 +112,6 @@ $page-header-widget-width: 350px;
     @media ($bp-large-min){
       padding-top: 50px;
     }
-
-    @media ($bp-x-large-min){
-      padding-top: 60px;
-    }
   }
 
   .ma__page-banner ~ & &__content {
@@ -125,7 +121,7 @@ $page-header-widget-width: 350px;
   &--has-widgets &__content {
 
     @media ($bp-medium-min){
-      padding-bottom: 45px;
+      padding-bottom: $standard-spacing--small;
     }
 
     @media ($bp-large-min){
@@ -137,17 +133,13 @@ $page-header-widget-width: 350px;
   }
 
   &__widgets {
-    padding-bottom: 40px;
+    padding-bottom: $standard-spacing--small;
 
     @media ($bp-large-min){
       float: right;
       padding-top: $standard-spacing--large;
-      padding-bottom: 60px;
+      padding-bottom: $standard-spacing--small;
       width: $page-header-widget-width;
-    }
-
-    @media ($bp-x-large-min){
-      padding-top: 85px;
     }
 
     & > * {
@@ -326,18 +318,13 @@ $page-header-widget-width: 350px;
     padding-bottom: 30px;
 
     @media ($bp-medium-min){
-      padding-bottom: 50px;
-    }
-
-    @media ($bp-large-min){
-      padding-bottom: $standard-spacing--large;
+      padding-bottom: $standard-spacing--small;
     }
 
     .ma__divider {
       padding-left: 0;
       padding-right: 0;
     }
-
   }
 }
 

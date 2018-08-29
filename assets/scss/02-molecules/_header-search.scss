@@ -18,7 +18,6 @@ $bp-header-search-reduce-button: "max-width: 700px";
     padding-left: 17px;
     width: 100%;
 
-
     @media ($bp-header-search-reduce-button) {
       padding-right: 60px
     }
@@ -32,8 +31,8 @@ $bp-header-search-reduce-button: "max-width: 700px";
     padding-top: 0;
     padding-bottom: 0;
     position: absolute;
-      right: 0;
-      top: 0;
+    right: 0;
+    top: 0;
 
     @media ($bp-x-small-max) {
       padding-left: 10px;
@@ -47,12 +46,12 @@ $bp-header-search-reduce-button: "max-width: 700px";
   }
 
   .ma__narrow-template & {
-    margin-bottom: 75px;
+    margin-bottom: $standard-spacing--large;
     max-width: 400px;
   }
 }
 
-//theme
+// Theme.
 .ma__header-search {
 
   .ma__button-search {
@@ -65,7 +64,7 @@ $bp-header-search-reduce-button: "max-width: 700px";
       border-color: $c-theme-secondary;
     }
 
-    // not the button in navigation
+    // Not the button in navigation.
     .ma__header__search & {
 
       @media ($bp-small-max) {

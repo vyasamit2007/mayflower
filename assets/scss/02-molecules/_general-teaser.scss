@@ -96,8 +96,11 @@
 
   &__contents {
     font-size: 1.25rem;
-  }
 
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 //theme

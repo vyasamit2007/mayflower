@@ -57,7 +57,7 @@ $heading-indent: $gutter;
   }
 
   h2 {
-    padding-top: .75em;
+    padding-top: $standard-spacing--small;
 
     &:first-child {
       padding-top: 0;
@@ -88,12 +88,16 @@ $heading-indent: $gutter;
     margin-bottom: .6em;
     padding-bottom: .45em;
 
-    &:after {
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &::after {
       width: 1.5em;
     }
 
     &.ma__rich-text__indent {
-      margin-left: $heading-indent * 2; // 1.
+      margin-left: $heading-indent * 2; //  1.
     }
   }
 
@@ -230,7 +234,7 @@ $heading-indent: $gutter;
   &__flame {
     font-weight: bold;
   }
-  
+
   &__footnote {
     border-color: rgba($c-font-link,.5);
 

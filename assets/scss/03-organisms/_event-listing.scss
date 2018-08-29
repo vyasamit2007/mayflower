@@ -39,8 +39,8 @@ $event-listing-bp-show-grid: $bp-medium-min;
 
     @media ($event-listing-bp-show-grid) {
       display: flex;
-        flex-wrap: wrap;
-        justify-content: stretch;
+      flex-wrap: wrap;
+      justify-content: stretch;
     }
   }
 
@@ -53,7 +53,7 @@ $event-listing-bp-show-grid: $bp-medium-min;
       padding-top: 0;
       position: relative;
 
-      &:after {
+      &::after {
         border-top-style: solid;
         border-top-width: 1px;
         content: "";
@@ -67,7 +67,7 @@ $event-listing-bp-show-grid: $bp-medium-min;
       &:nth-child(2) {
         margin-top: 0;
 
-        &:before {
+        &::before {
           display: none;
         }
       }
@@ -75,7 +75,7 @@ $event-listing-bp-show-grid: $bp-medium-min;
       &:last-child,
       &:nth-last-child(2):nth-child(odd) {
 
-        &:after {
+        &::after {
           display: none;
         }
       }
@@ -92,22 +92,22 @@ $event-listing-bp-show-grid: $bp-medium-min;
         &:nth-child(odd) {
           border-right-width: 1px;
           border-right-style: solid;
-          padding-right: 40px;
+          padding-right: $standard-spacing--small;
         }
 
         &:nth-child(even) {
-          padding-left: 40px;
+          padding-left: $standard-spacing--small;
         }
       }
 
       @media ($bp-large-min) {
 
         &:nth-child(odd) {
-          padding-right: 70px;
+          padding-right: $standard-spacing--large;
         }
 
         &:nth-child(even) {
-          padding-left: 70px;
+          padding-left: $standard-spacing--large;
         }
       }
     }
@@ -122,13 +122,21 @@ $event-listing-bp-show-grid: $bp-medium-min;
     .sidebar & {
       margin-top: 20px;
       padding-top: 20px;
+
+      &:last-child {
+        padding-bottom: 20px;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 30px;
     }
   }
 
   &--grid &__item + &__item {
 
     @media ($event-listing-bp-show-grid) {
-      border-top: none;
+      border-top: 0;
       margin-top: 60px;
       padding-top: 0;
 
@@ -160,11 +168,11 @@ $event-listing-bp-show-grid: $bp-medium-min;
   // Jonathan Dallas - 06/29/2017
   .post-content > & &__container {
     @include ma-container;
-    padding-top: 60px;
+    padding-top: $standard-spacing--large;
 
     & > *:last-child {
       border-bottom: 2px solid;
-      padding-bottom: 50px;
+      padding-bottom: $standard-spacing--large;
     }
   }
 
@@ -172,8 +180,8 @@ $event-listing-bp-show-grid: $bp-medium-min;
 
     @media ($bp-medium-min) {
       display: flex;
-        flex-wrap: wrap;
-        justify-content: stretch;
+      flex-wrap: wrap;
+      justify-content: stretch;
     }
   }
 
@@ -200,24 +208,24 @@ $event-listing-bp-show-grid: $bp-medium-min;
         width: 50%;
 
         &:nth-child(odd) {
-          padding-right: 40px;
+          padding-right: $standard-spacing--small;
         }
 
         &:nth-child(even) {
           border-left-width: 1px;
           border-left-style: solid;
-          padding-left: 40px;
+          padding-left: $standard-spacing--small;
         }
       }
 
       @media ($bp-large-min) {
 
         &:nth-child(odd) {
-          padding-right: 70px;
+          padding-right: $standard-spacing--large;
         }
 
         &:nth-child(even) {
-          padding-left: 70px;
+          padding-left: $standard-spacing--large;
         }
       }
     }
@@ -235,7 +243,7 @@ $event-listing-bp-show-grid: $bp-medium-min;
   &--grid &__item {
     border-color: $c-bd-divider;
 
-    &:after {
+    &::after {
       border-color: $c-bd-divider;
     }
   }
@@ -261,7 +269,7 @@ $event-listing-bp-show-grid: $bp-medium-min;
 }
 
 .ma__event-filters {
-  
+
   legend, label {
     color: $c-font-detail;
   }

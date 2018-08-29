@@ -1,8 +1,7 @@
 .ma__event-teaser {
-  display: flex;
   align-items: flex-start;
+  display: flex;
   flex-wrap: wrap;
-  margin-bottom: -20px;
 
   & + & {
     border-top-style: solid;
@@ -69,7 +68,7 @@
     }
   }
 
-  &__content {
+  &__content:not(:last-child) {
     margin-bottom: 20px;
   }
 

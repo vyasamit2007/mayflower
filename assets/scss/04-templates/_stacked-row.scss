@@ -11,7 +11,7 @@
       }
 
       .ma__stacked-row__title .ma__comp-heading {
-        margin-top: 15px;
+        margin-top: 45px;
       }
     }
 
@@ -44,7 +44,7 @@
     }
   }
 
-  &__section ~ &__section--borderless &__container:before {
+  &__section ~ &__section--borderless &__container::before {
     @media ($bp-large-min) {
       border-top-width: 0;
     }
@@ -62,7 +62,7 @@
     border-color: $c-bd-divider;
   }
 
-  &__section ~ &__section &__container:before {
+  &__section ~ &__section &__container::before {
     border-color: $c-bd-divider;
   }
 }

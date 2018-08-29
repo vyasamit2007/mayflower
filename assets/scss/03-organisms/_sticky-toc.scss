@@ -3,7 +3,7 @@
   //position: relative // can't have position relative here or the links won't stick for the height of page-content
 
   @media ($bp-small-min) {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     padding-top: 30px;
   }
 
@@ -26,7 +26,7 @@
     @include ma-heading-colored;
     margin-bottom: 0;
     position: relative;
-      top: -30px;
+    top: -30px;
 
     &:after {
       display: none;
@@ -64,7 +64,7 @@
 
       &[data-sticky='middle'] {
         position: fixed;
-          top: 40px;
+        top: 40px;
 
         .translated-rtl &,
         .translated-ltr & {
@@ -74,8 +74,8 @@
 
       &[data-sticky='bottom'] {
         position: absolute;
-          top: auto; // height of one line of text
-          bottom: -30px; // compensate for bottom margin
+        top: auto; // height of one line of text
+        bottom: -30px; // compensate for bottom margin
       }
     }
   }
@@ -86,8 +86,8 @@
     line-height: .65em;
     overflow: hidden;
     position: absolute;
-      right: 10px;
-      top: 9px;
+    right: 10px;
+    top: 9px;
     transition: transform .2s ease;
     transform-origin: center center;
     z-index: 1;

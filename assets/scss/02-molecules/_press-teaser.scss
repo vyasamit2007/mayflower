@@ -1,6 +1,6 @@
 .ma__press-teaser {
   @include clearfix();
-  
+
   &--image {
     display: flex;
       flex-wrap: wrap;
@@ -52,6 +52,7 @@
   }
 
   &__eyebrow {
+    display: flex;
     margin-bottom: 5px;
 
     span {
@@ -71,10 +72,6 @@
       font-size: 1.625rem;
       line-height: 1.2;
     }
-  }
-
-  &__details {
-    padding: 2px 0 4px;
   }
 
   &__date,

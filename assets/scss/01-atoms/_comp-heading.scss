@@ -2,6 +2,7 @@
 
   &:not(&--sidebar) {
     @include ma-comp-heading;
+    margin-bottom: $standard-spacing--small;
   }
 
   &--sidebar,
