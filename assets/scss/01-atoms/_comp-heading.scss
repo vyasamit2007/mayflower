@@ -9,7 +9,7 @@
   .sidebar & {
     @include ma-sidebar-heading;
 
-    &:after {
+    &::after {
       display: none;
     }
   }
@@ -17,7 +17,7 @@
   &--centered:not(&--sidebar) {
     text-align: center;
 
-    &:after {
+    &::after {
       left: 50%;
       transform: translateX(-50%);
     }
@@ -25,9 +25,9 @@
 
   .sidebar--colored & {
     @include ma-heading-colored($direction: left);
-    border-bottom: none;
+    border-bottom: 0;
 
-    &:after {
+    &::after {
       display: block;
     }
   }

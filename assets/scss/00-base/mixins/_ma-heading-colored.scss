@@ -4,7 +4,7 @@
 
 @mixin ma-heading-colored($c-bg:transparent,$direction:right,$c-page:white) {
   $offset: 55px;
-  
+
   @if($c-bg == transparent) {
     font-size: 1.375rem;
     letter-spacing: .1em;
@@ -16,11 +16,11 @@
     text-transform: uppercase;
 
     @media ($bp-small-min) {
-      margin-bottom: 30px;
+      margin-bottom: $standard-spacing--small;
       padding: 18px 25px 14px 25px;
     }
 
-    &:after {
+    &::after {
       content: "";
       height: 200%;
       position: absolute;
@@ -56,7 +56,7 @@
         padding-left: $offset;
         margin-left: -$offset + 20px;
 
-        &:after {
+        &::after {
           top: auto;
           right: 100%;
           bottom: 0;
@@ -80,7 +80,7 @@
         padding-left: $offset;
         margin-left: -$offset + 20px;
 
-        &:after {
+        &::after {
           top: auto;
           right: 100%;
           bottom: 0;
@@ -100,7 +100,7 @@
     background-color: $c-bg;
     color: white;
 
-    &:after {
+    &::after {
       background-color: $c-page;
     }
   }

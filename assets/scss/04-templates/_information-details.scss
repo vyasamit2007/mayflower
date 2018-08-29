@@ -1,23 +1,5 @@
 .ma__information-details {
 
-  &__content {
-
-    & > * {
-      @include ma-component-spacing;
-    }
-  }
-}
-//theme
-.ma__information-details {
-
-  &__content,
-  &__post-content {
-
-    & > * {
-      @include ma-component-spacing;
-    }
-  }
-
   .ma__figure__caption {
     color: $c-font-detail;
     font-weight: bold;

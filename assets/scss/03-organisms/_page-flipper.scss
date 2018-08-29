@@ -7,10 +7,10 @@
   }
 
   .post-content &:last-child {
-    margin-bottom: 30px;
+    margin-bottom: $standard-spacing--small;
 
     @media ($bp-medium-min) {
-      margin-bottom: 45px;
+      margin-bottom: $standard-spacing--large;
     }
   }
 
@@ -43,7 +43,7 @@
     max-width: 50%;
 
     @media ($bp-small-min) {
-      margin-top: 30px;
+      margin-top: $standard-spacing--small;
     }
   }
 

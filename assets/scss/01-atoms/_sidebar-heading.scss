@@ -3,7 +3,7 @@
 
   .sidebar--colored & {
     @include ma-heading-colored($direction: left);
-    border: none;
+    border: 0;
   }
 }
 

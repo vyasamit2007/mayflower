@@ -1,17 +1,16 @@
 .ma__suggested-pages {
-
   text-align: center;
 
   &__container {
     @include ma-container;
     border-bottom: 2px solid;
-    padding-bottom: 50px;
+    padding-bottom: $standard-spacing--small;
   }
 
   &__title {
     @include ma-border-decorative;
-    margin-bottom: 45px;
-    padding-top: 60px;
+    margin-bottom: $standard-spacing--small;
+    padding-top: $standard-spacing--large;
     padding-bottom: 16px;
     text-align: center;
 
@@ -48,7 +47,7 @@
 
   &__item--figure {
     display: block;
-    margin: 0 0 35px 0;
+    margin: 0 0 35px;
     vertical-align: top;
 
     a {
@@ -72,6 +71,7 @@
     @media ($bp-large-min) {
       padding: 0 45px;
       width: 25%;
+
       & + & {
         border-left: 1px solid;
       }
