@@ -1,0 +1,6 @@
+___DESCRIPTION___
+
+Change_type: Changed for changes in existing functionality.
+Change_impact Minor
+- (Patternlab) DP-9727: Updates spacing of pages to a balance of 45px & 70px
+  vertical spacing. No spacing to exeed 70px.
