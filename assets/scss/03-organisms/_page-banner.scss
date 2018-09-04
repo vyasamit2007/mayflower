@@ -323,7 +323,7 @@ $page-banner-height: 330px;
   .ma__decorative-link {
     @include base-typography;
     display: block;
-    letter-spacing: 0.02em;
+    letter-spacing: $letter-spacing-small;
     margin-bottom: 0;
     margin-top: 1.625rem;
     top: $page-banner-height;
@@ -362,7 +362,7 @@ $page-banner-height: 330px;
     @media ($bp-medium-min) {
       @include span-columns(4 of 12);
       font-size: 1.813rem;
-      letter-spacing: 0.02em;
+      letter-spacing: $letter-spacing-small;
       line-height: 2.188rem;
       padding-top: 100px;
       padding-right: 20px;

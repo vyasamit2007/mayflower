@@ -47,7 +47,8 @@ img {
 }
 
 p,
-ul, ol {
+ul,
+ol {
   margin-top: 0;
 }
 
@@ -60,7 +61,6 @@ ol ul {
 
 // Custom ol list style types out to 9 levels
 // All decimals after that
-
 ol {
   list-style-type: decimal;
 
@@ -70,33 +70,33 @@ ol {
     ol {
       list-style-type: lower-roman;
 
+      ol {
+        list-style-type: decimal;
+
         ol {
-          list-style-type: decimal;
+          list-style-type: lower-alpha;
 
           ol {
-            list-style-type: lower-alpha;
+            list-style-type: lower-roman;
 
             ol {
-              list-style-type: lower-roman;
+              list-style-type: decimal;
 
               ol {
-                list-style-type: decimal;
+                list-style-type: lower-alpha;
 
                 ol {
-                  list-style-type: lower-alpha;
+                  list-style-type: lower-roman;
 
                   ol {
-                    list-style-type: lower-roman;
-
-                    ol {
-                      list-style-type: decimal;
-                    }
+                    list-style-type: decimal;
                   }
                 }
               }
             }
           }
         }
+      }
     }
   }
 }
@@ -145,8 +145,8 @@ h6 {
 
 // To disabled scrolling (for use when another scrollable container is in the foreground)
 .scroll-disabled {
-  height: 100vh;
   overflow: hidden;
+  height: 100vh;
 }
 
 h1,
@@ -160,7 +160,6 @@ div {
     outline: none;
   }
 }
-
 
 b,
 strong {

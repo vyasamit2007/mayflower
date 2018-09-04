@@ -1,13 +1,13 @@
-@mixin ma-component-spacing($size:small) {
+@mixin ma-component-spacing($size: small) {
   @if($size == large) {
     margin-top: $standard-spacing--small;
 
-    @media ($bp-small-min){
+    @media ($bp-small-min) {
       margin-top: 60px;
     }
 
-    @media ($bp-medium-min){
-      margin-top: 70px;
+    @media ($bp-medium-min) {
+      margin-top: $standard-spacing--large;
     }
   }
   @else {

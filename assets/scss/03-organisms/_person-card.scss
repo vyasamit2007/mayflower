@@ -18,24 +18,24 @@
 
   &__name {
 
-    h2 {
+    .ma__comp-heading {
+      font-weight: 500;
       margin-bottom: 0;
       padding-bottom: 5px;
-      font-weight: 500;
 
       @media ($bp-small-min) {
         font-size: 2.25rem;
       }
-    }
 
-    h2::after {
-      display: none;
+      &::after {
+        display: none;
+      }
     }
   }
 
   &__title {
 
-    h3 {
+    .ma__column-heading {
       margin-bottom: 0;
 
       @media ($bp-small-min) {

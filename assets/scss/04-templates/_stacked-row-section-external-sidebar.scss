@@ -1,5 +1,5 @@
 .ma_stacked-row-external-sidebar {
-  @include ma-container();
+  @include ma-container;
 
   .stacked-row-column {
     @media ($bp-large-min) {
@@ -15,6 +15,6 @@
 }
 
 .post-content__stacked-row-external-sidebar {
-  width: 100%;
   clear: both;
+  width: 100%;
 }

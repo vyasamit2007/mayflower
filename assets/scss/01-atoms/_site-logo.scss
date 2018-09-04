@@ -28,19 +28,18 @@
       display: inline-block;
       font-size: 1.9rem;
       font-weight: 400;
-      letter-spacing: 0.03rem;
+      letter-spacing: $letter-spacing-small;
       line-height: 1;
       margin-left: 0.4rem;
       // 119px - margin-left(7).
       width: 112px;
-
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: $c-theme-green;
 
       @media ($bp-small-max) {
         font-size: 1.7rem;
         margin-left: 0.3rem;
-        // 108px - margin-left(6)
+        // 108px - margin-left(6).
         width: 102px;
         -webkit-text-stroke-width: 0.03rem;
       }
