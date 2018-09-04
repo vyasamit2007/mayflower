@@ -102,32 +102,41 @@ ol {
 }
 
 
-// Heading styles
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
+// Heading styles.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $c-font-heading;
-  font-weight: 700;
+  font-weight: 600;
+  margin-top: 0;
 }
+
 h1 {
   @include ma-h1;
 }
+
 h2 {
   @include ma-h2;
 }
+
 h3 {
   @include ma-h3;
 }
+
 h4 {
   @include ma-h4;
 }
+
 h5 {
   @include ma-h5;
 }
+
 h6 {
   @include ma-h6;
 }
-
-// end heading styles
 
 .ma__visually-hidden,
 .visually-hidden {
@@ -151,14 +160,9 @@ div {
     outline: none;
   }
 }
-<<<<<<< HEAD
-
-//theme
-
-=======
->>>>>>> develop
 
 
-b, strong {
+b,
+strong {
   font-weight: 700;
 }

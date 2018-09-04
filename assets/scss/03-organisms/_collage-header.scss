@@ -11,7 +11,7 @@ $collage-header-bp-min: "min-width: 701px";
 
     @media ($collage-header-bp-min) {
       padding-top: 60px;
-      padding-bottom: 90px;
+      padding-bottom: $standard-spacing--large;
     }
   }
 
