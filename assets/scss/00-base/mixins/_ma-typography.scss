@@ -3,7 +3,8 @@
 // special font glyphs.
 @mixin base-typography {
   // Typical fontstack provided for natural fallback.
-  font: 400 1.375rem/1.5 "Texta", "Source Sans Pro", Arial, sans-serif;
+  // font: 400 1.375rem/1.5 "Texta", "Source Sans Pro", Arial, sans-serif;
+  font: 400 1.375rem/1.5 Arial, sans-serif;
   // When special glyphs are not located in Texta, Source Sans Pro is the
   // fallback font for locating said glyphs
   font: 300 1.375rem/1.5 "Source Sans Pro";
