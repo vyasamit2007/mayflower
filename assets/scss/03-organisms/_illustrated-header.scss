@@ -52,7 +52,7 @@ $bp-illustrated-header-image-width: 360px;
 
     @media ($bp-illustrated-header-columns-min) {
       float: none;
-      min-height: 430px;
+      min-height: 350px;
       width: calc(100% - #{$bp-illustrated-header-image-width}); // width of right rail
 
       &::after {
