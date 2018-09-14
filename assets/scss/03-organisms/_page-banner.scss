@@ -139,7 +139,7 @@ $page-banner-height: 330px;
     display: flex;
     flex-wrap: wrap;
     font-size: 1rem;
-    max-width: 850px;
+    max-width: 650px;
     max-height: 174px;
     padding: 30px 25px $standard-spacing--small 0;
     top: -50%;
@@ -173,10 +173,11 @@ $page-banner-height: 330px;
     z-index: 1;
 
      @media ($bp-x-small-min) {
-      transform: skew(30deg);
-      width: 55vw;
+      align-items: center;
       display: flex;
       flex-wrap: wrap;
+      transform: skew(30deg);
+      width: 55vw;
     }
   }
 
@@ -240,14 +241,14 @@ $page-banner-height: 330px;
   }
 
   &__icon {
+    display: none;
     padding-right: 30px;
     width: 75px;
-    display: none;
 
     @media ($bp-medium-min) {
+      display: inline-block;
       margin: auto 0;
       width: $page-banner-icon-width;
-      display: inline-block;
     }
 
     & > svg {
@@ -280,7 +281,6 @@ $page-banner-height: 330px;
   }
 
   &__title {
-    @include ma-h1;
     color: $c-font-inverse;
     flex-grow: 1;
     font-weight: 400;
