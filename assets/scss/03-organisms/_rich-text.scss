@@ -24,13 +24,12 @@ $heading-indent: $gutter;
   }
 
   .ma__split-columns__column > & {
-    margin-bottom: 1em;
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
 
-  // extra specificity was needed to override & a { ... }
+  // Extra specificity was needed to override & a { ... }.
   & &__footnote {
     border-style: solid;
     border-width: 2px;

@@ -13,15 +13,16 @@
   &__column {
     @include ma-component-spacing;
 
-    // two items (50/50)
+    // Two items (50/50).
     &:first-child:nth-last-child(2),
     &:first-child:nth-last-child(2) ~ & {
-      
+
       @media($bp-medium-min) {
         @include span-columns(2 of 4);
         margin-top: 0;
       }
     }
+
     @media($bp-x-large-min) {
       &:first-child:nth-last-child(2),
       &:first-child:nth-last-child(2) ~ & {
@@ -38,17 +39,17 @@
       }
     }
 
-    // three columns
+    // Three columns.
     &:first-child:nth-last-child(3),
     &:first-child:nth-last-child(3) ~ & {
-      
+
       @media($bp-large-min) {
         @include span-columns(2 of 6);
         margin-top: 0;
       }
     }
-      
-    // two items (50/50) in a 2/3 width
+
+    // Two items (50/50) in a 2/3 width.
     .main-content--two &:first-child:nth-last-child(2),
     .main-content--two &:first-child:nth-last-child(2) ~ & {
       @media($bp-large-min) {
