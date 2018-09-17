@@ -1,31 +1,33 @@
 .ma__search-banner {
+  align-items: center;
   background-position: center center;
   background-size: cover;
   display: flex;
-    align-items: center;
   font-size: 0;
   padding: 30px 0 95px;
 
   @media ($bp-small-min) {
-    height: 1px; // IE11 hack to vertially align content with min-height
+    // IE11 hack to vertially align content with min-height.
+    height: 1px;
     min-height: 800px;
   }
 
-  .page-content &:last-child {
-    margin-bottom: -45px; // compensating for main-content margin
+  .ma__stacked-row-section .page-content &:last-child {
+    // Compensating for main-content margin.
+    margin-bottom: -($standard-spacing--small);
 
     @media ($bp-large-min){
-      margin-bottom: -60px; // compensating for main-content margin
+      // Compensating for main-content margin.
+      margin-bottom: -($standard-spacing--large);
     }
   }
 
-
-  &:after {
+  &::after {
     content: "";
     height: 100%;
+    left: 0;
     position: absolute;
-      top: 0;
-      left: 0;
+    top: 0;
     width: 100%;
     z-index: 1;
   }
@@ -53,9 +55,9 @@
     }
   }
 
-  // backward compatible with v5.6 - title was replaced with Page Intro
+  // Backward compatible with v5.6 - title was replaced with Page Intro.
   &__title {
-    margin-bottom: .4em;
+    margin-bottom: 0.4em;
     text-align: center;
 
     @media ($bp-large-min) {
@@ -63,10 +65,10 @@
     }
   }
 
-  // backward compatible with v5.6 - intro was replaced with Page Intro
+  // Backward compatible with v5.6 - intro was replaced with Page Intro.
   &__intro {
     @include ma-h3;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
     text-align: center;
   }
 
@@ -118,7 +120,7 @@
     padding-left: 15px;
     padding-right: 15px;
     text-transform: uppercase;
-    transition: color .5s, fill .5s, background .5s;
+    transition: color 0.5s, fill 0.5s, background 0.5s;
 
     @media ($bp-small-min) {
       height: 60px;
@@ -145,7 +147,7 @@
     & > svg {
       display: inline-block;
       height: 20px;
-      transition: color .5s, fill .5s, background .5s;
+      transition: color 0.5s, fill 0.5s, background 0.5s;
       vertical-align: middle;
       width: 20px;
 
@@ -164,11 +166,10 @@
     .ma__comp-heading {
       font-size: 1.375rem;
       letter-spacing: $letter-spacing-large;
-      margin-bottom: .75em;
+      margin-bottom: 0.75em;
       text-transform: uppercase;
 
-      &:after {
-        //left: calc(50% - 42px); // half width -- only necessary if not centered.
+      &::after {
         left: calc(50%);
         width: 84px;
       }
@@ -183,7 +184,7 @@
 
       span {
         border-bottom-width: 1px;
-        transition: border .3s ease;
+        transition: border 0.3s ease;
 
         &:hover {
           border-bottom-width: 3px;
@@ -194,20 +195,21 @@
 
   .ma__banner-credit {
     @include ma-container;
+    bottom: 20px;
+    left: 50%;
     position: absolute;
-      bottom: 20px;
-      left: 50%;
     transform: translateX(-50%);
     width: 100%;
     z-index: 3;
   }
 
-  // Start backward compatible with v5.7 - converted image-credit to new Banner Credit molecule
+  // Start backward compatible with v5.7 - converted image-credit
+  // to new Banner Credit molecule.
   &__image-credit {
     @include ma-container;
+    bottom: 20px;
     position: absolute;
-      bottom: 20px;
-      left: 50%;
+    left: 50%;
     transform: translateX(-50%);
     width: 100%;
     z-index: 3;
@@ -219,9 +221,9 @@
   }
 
   &__icon {
+    left: 0;
     position: absolute;
-      top: 0;
-      left: 0;
+    top: 0;
 
     & > svg {
       height: 27px;
@@ -238,7 +240,8 @@
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
-  // End backward compatible with v5.7 - converted image-credit to new Banner Credit molecule
+  // End backward compatible with v5.7 - converted image-credit
+  // to new Banner Credit molecule
 
 }
 
@@ -248,8 +251,8 @@
   background-size: cover;
   position: relative;
 
-  &:after {
-    background-color: rgba($c-black, .6);
+  &::after {
+    background-color: rgba($c-black, 0.6);
   }
 
   &__container {
@@ -269,13 +272,13 @@
     }
   }
 
-  // backward compatible with v5.6 - title was replaced with Page Intro
+  // Backward compatible with v5.6 - title was replaced with Page Intro.
   &__title {
     color: $c-font-inverse;
     font-weight: 300;
   }
 
-  // backward compatible with v5.6 - intro was replaced with Page Intro
+  // Backward compatible with v5.6 - intro was replaced with Page Intro.
   &__intro {
     color: $c-font-inverse;
     font-weight: 400;
@@ -294,13 +297,13 @@
       font-style: italic;
     }
 
-    &:-moz-placeholder { /* Firefox 18- */
+    &:-moz-placeholder {
       color: $c-font-medium;
       font-weight: 300;
       font-style: italic;
     }
 
-    &::-moz-placeholder {  /* Firefox 19+ */
+    &::-moz-placeholder {
       color: $c-font-medium;
       font-weight: 300;
       font-style: italic;
@@ -343,11 +346,11 @@
       font-weight: 400;
 
       &:hover {
-        border-bottom-color: rgba($c-font-inverse, .5);
+        border-bottom-color: rgba($c-font-inverse, 0.5);
       }
 
       & svg {
-        fill: rgba($c-font-inverse, .5);
+        fill: rgba($c-font-inverse, 0.5);
       }
     }
   }
@@ -362,23 +365,16 @@
     }
 
     &__image-name {
-      color: rgba($c-font-inverse,.9);
+      color: rgba($c-font-inverse, 0.9);
     }
 
     &__image-author {
-      color: rgba($c-font-inverse, .5);
+      color: rgba($c-font-inverse, 0.5);
     }
   }
 
-  // Start backward compatible with v5.7 - converted image-credit to new Banner Credit molecule
-  &__image-credit {
-
-  }
-
-  &__credits-container {
-
-  }
-
+  // Start backward compatible with v5.7 - converted image-credit
+  // to new Banner Credit molecule
   &__icon {
 
     & > svg {
@@ -387,13 +383,14 @@
   }
 
   &__image-name {
-    color: rgba($c-font-inverse,.9);
+    color: rgba($c-font-inverse, 0.9);
     font-weight: 400;
   }
 
   &__image-author {
-    color: rgba($c-font-inverse, .5);
+    color: rgba($c-font-inverse, 0.5);
     font-weight: 400;
   }
-  // End backward compatible with v5.7 - converted image-credit to new Banner Credit molecule
+  // End backward compatible with v5.7 - converted image-credit
+  // to new Banner Credit molecule
 }

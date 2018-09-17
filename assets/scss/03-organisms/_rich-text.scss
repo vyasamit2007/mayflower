@@ -64,6 +64,10 @@ $heading-indent: $gutter;
     }
   }
 
+  &:first-child h2 {
+    padding-top: 0;
+  }
+
   /**
    * Rich text content can be styled like an outline when a modifier class is added by rich-text.js
    * 1. Headings will be indented
