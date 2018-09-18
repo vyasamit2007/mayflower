@@ -24,7 +24,7 @@
     }
 
     span {
-      color: $c-theme-green;
+      color: $c-primary-alt;
       display: inline-block;
       font-size: 1.9rem;
       font-weight: 400;
@@ -34,7 +34,7 @@
       // 119px - margin-left(7).
       width: 112px;
       -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: $c-theme-green;
+      -webkit-text-stroke-color: $c-primary-alt;
 
       @media ($bp-small-max) {
         font-size: 1.7rem;

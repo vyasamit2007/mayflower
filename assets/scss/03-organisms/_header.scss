@@ -294,7 +294,7 @@ body {
   &__main-nav {
 
     @media ($bp-header-toggle-max){
-      border-bottom: 2px solid; // $c-gray-dcdcdc;
+      border-bottom: 2px solid; // $c-gray-light;
       margin-bottom: 15px;
       padding-bottom: 15px;
     }
@@ -381,7 +381,7 @@ body {
 
   &__button-container {
     @media ($bp-header-toggle-max) {
-      background-color: $c-theme-primary;
+      background-color: $c-primary;
     }
   }
 
@@ -455,7 +455,7 @@ body {
 
       &:focus {
         background-color: $c-white;
-        border-color: $c-theme-tertiary !important;
+        border-color: $c-highlight !important;
       }
     }
   }

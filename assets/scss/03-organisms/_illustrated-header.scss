@@ -34,7 +34,7 @@ $bp-illustrated-header-image-width: 360px;
     }
 
     &--empty {
-      background-color: $c-theme-secondary;
+      background-color: $c-primary-alt;
 
       @media ($bp-illustrated-header-columns-max) {
         display: none;
@@ -124,7 +124,7 @@ $bp-illustrated-header-image-width: 360px;
   &,
   .ma__illustrated-header__content,
   .ma__illustrated-header__image--empty {
-    background: $c-theme-blue;
+    background: $c-primary;
   }
 }
 

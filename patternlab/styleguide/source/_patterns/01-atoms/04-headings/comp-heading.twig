@@ -8,13 +8,12 @@
 {% set headingLevel = compHeading.level ? : 2 %}
 
 {# String value is backward compatible for v5.0.0. #}
+{% set isCentered = false %}
 {% if compHeading.centered == 'true' or compHeading.centered == 1 %}
-  {% set compHeading = compHeading|merge({'centered': true}) %}
-{% else %}
-  {% set compHeading = compHeading|merge({'centered': false}) %}
+  {% set isCentered = true %}
 {% endif %}
 
-{% if compHeading.centered %}
+{% if isCentered %}
   {% set centered = "ma__comp-heading--centered" %}
 {% endif %}
 
@@ -26,5 +25,5 @@
     id="{{compHeading.id}}"
   {% endif %}
   tabindex="-1">{{ compHeading.title }}
-  {% if compHeading.titleContext %}<span class="visually-hidden"> {{ compHeading.titleContext }}{% endif %}
+  {% if compHeading.titleContext %}<span class="visually-hidden"> {{ compHeading.titleContext }}</span>{% endif %}
 </h{{ headingLevel }}>

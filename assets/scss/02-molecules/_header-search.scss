@@ -64,8 +64,8 @@ $bp-header-search-reduce-button: "max-width: 700px";
     border-color: $c-bd-input;
 
     &:hover {
-      background: $c-theme-secondary;
-      border-color: $c-theme-secondary;
+      background: $c-primary-alt;
+      border-color: $c-primary-alt;
     }
 
     // Not the button in navigation.
@@ -75,7 +75,7 @@ $bp-header-search-reduce-button: "max-width: 700px";
         background-color: $c-white;
 
         &:hover {
-          background: $c-theme-secondary;
+          background: $c-primary-alt;
         }
       }
     }

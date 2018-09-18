@@ -18,20 +18,14 @@ html {
   @media ($bp-small-min){
     font-size: 16px;
   }
-
-  // .translated-rtl & {
-  //   direction: rtl;
-  // }
 }
 
 body {
   @include base-typography;
   color: $c-font-base;
   margin: 0;
-
-  // .translated-rtl & {
-  //   direction: rtl;
-  // }
+  // for IE weirdness
+  -ms-overflow-style: none;
 }
 
 a {

@@ -1,6 +1,7 @@
 $page-banner-icon-width: $column + $gutter;
 $page-banner-height: 330px;
 $page-banner-height--columns--large: 460px;
+$page-banner-inner-width: 612px;
 
 .ma__page-banner {
   background-size: cover;
@@ -400,35 +401,33 @@ $page-banner-height--columns--large: 460px;
 }
 
 //theme
-$page-banner-inner-width: 612px;
-
 .ma__page-banner {
 
   &__container {
     &::before {
-      background-color: rgba($c-theme-secondary, 0.8);
+      background-color: rgba($c-primary-alt, 0.8);
     }
   }
 
   &--blue &__container {
     &::before {
-      background-color: rgba($c-theme-blue, 0.8);
+      background-color: rgba($c-primary, 0.8);
     }
   }
 
   &__content {
-    background-image: linear-gradient(-90deg, rgba($c-theme-secondary,0.7), $c-theme-secondary 95%);
+    background-image: linear-gradient(-90deg, rgba($c-primary-alt, 0.7), $c-primary-alt 95%);
 
     &::before {
-      background-color: $c-theme-secondary;
+      background-color: $c-primary-alt;
     }
   }
 
   &--blue &__content {
-    background-image: linear-gradient(-90deg, rgba($c-theme-blue,0.7), $c-theme-blue 95%);
+    background-image: linear-gradient(-90deg, rgba($c-primary, 0.7), $c-primary 95%);
 
     &::before {
-      background-color: $c-theme-blue;
+      background-color: $c-primary;
     }
   }
 
@@ -438,7 +437,7 @@ $page-banner-inner-width: 612px;
 
   &--columns &__content {
     &::after {
-      background-color: rgba($c-theme-secondary,.7);
+      background-color: rgba($c-primary-alt, 0.7);
     }
 
     @media ($bp-x-small-min) {
@@ -450,12 +449,12 @@ $page-banner-inner-width: 612px;
 
   &--linked &__container {
     @media ($bp-large-extended) {
-      background-color: $c-theme-secondary;
+      background-color: $c-primary-alt;
     }
   }
 
   &--linked &__content {
-    background-color: $c-theme-secondary;
+    background-color: $c-primary-alt;
     background-image: none;
   }
 
