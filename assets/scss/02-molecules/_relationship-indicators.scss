@@ -52,7 +52,7 @@
 
         &.primary {
             flex-flow: row nowrap;
-        
+
             @media ($bp-medium-min) {
                 padding-right: 2rem;
             }
@@ -64,7 +64,7 @@
                     flex-direction: initial;
                 }
             }
-        
+
             .ma__relationship-indicators--term {
                 display: none;
 
@@ -143,7 +143,7 @@
             padding: 1px 5px;
             line-height: 1.2;
             width: 100%;
-        
+
             @media ($bp-x-small-min) {
                 width: auto;
                 display: inline-block;
@@ -163,20 +163,20 @@
             font-weight: 600;
             white-space: nowrap;
             display: none;
-            
+
             @media ($bp-small-min) {
                 margin-top: 3px;
             }
-            
+
             @media ($bp-medium-min) {
                 align-self: baseline;
                 margin-top: 8px;
             }
-            
+
             .tag-state {
                 text-transform: none;
             }
-            
+
             &:after {
                 opacity: 0.5;
                 border-width: 3px;
@@ -184,7 +184,7 @@
                 width: 8px;
                 transform: translateY(-45%) rotate(45deg);
             }
-            
+
             &.is-open::after {
                 transform: translateY(-55%) rotate(-135deg);
             }
