@@ -163,7 +163,8 @@ $page-banner-inner-width: 612px;
       content: "";
       height: 100%;
       top: 0;
-      right: 100%;
+      // Account for 20px padding on `&__container`.
+      right: calc(100% - 20px);
       position: absolute;
       width: 50vw;
 
@@ -188,12 +189,19 @@ $page-banner-inner-width: 612px;
 
   &--small &__content {
     font-size: 0.8rem;
-    max-height: 100px;
-    padding: 25px 25px 40px 0;
+    min-height: 100px;
+    padding: $standard-spacing--xsmall $standard-spacing--xsmall $standard-spacing--xsmall 0;
+
+    // Prevent the `&--small` version from disappearing within the
+    // x-small and small breakpoint.
+    @media ($bp-x-small-min) and ($bp-small-max) {
+      position: relative;
+      top: auto;
+      transform: skew(-30deg);
+    }
 
     @media ($bp-x-small-min) {
-      padding-top: $standard-spacing--small;
-      padding-right: 80px;
+      padding-right: $standard-spacing--small;
     }
   }
 
