@@ -86,19 +86,15 @@ $page-header-widget-width: 350px;
 
   &__content {
     padding-top: 30px;
-    padding-bottom: 40px;
+    padding-bottom: $standard-spacing--small;
 
     @media ($bp-small-min){
-      padding-top: 40px;
+      padding-top: $standard-spacing--small;
     }
 
-    @media ($bp-medium-min){
-      padding-top: $standard-spacing--large;
-      padding-bottom: 45px;
-    }
-
-    @media ($bp-large-min){
-      padding-bottom: $standard-spacing--large;
+    @media ($bp-medium-min) {
+      padding-bottom: $standard-spacing--medium;
+      padding-top: $standard-spacing--medium;
     }
   }
 
