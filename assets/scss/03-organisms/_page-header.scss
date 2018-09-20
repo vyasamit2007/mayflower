@@ -94,6 +94,7 @@ $page-header-widget-width: 350px;
 
     @media ($bp-medium-min) {
       padding-bottom: $standard-spacing--medium;
+      // Top padding is `medium` to account for line-height on title.
       padding-top: $standard-spacing--medium;
     }
   }
@@ -129,6 +130,7 @@ $page-header-widget-width: 350px;
 
     @media ($bp-large-min){
       float: right;
+      // Top padding is `large` since there is no line-height to account for.
       padding-top: $standard-spacing--large;
       padding-bottom: $standard-spacing--small;
       width: $page-header-widget-width;

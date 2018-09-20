@@ -166,13 +166,14 @@ $page-banner-inner-width: 612px;
     display: flex;
     flex-wrap: wrap;
     max-width: 650px;
-    max-height: 174px;
+    min-height: 100px;
     padding: $standard-spacing--xsmall $standard-spacing--xsmall $standard-spacing--xsmall 0;
     top: -50%;
     z-index: 1;
 
     @media ($bp-x-small-min) {
       margin-right: $standard-spacing--large;
+      min-height: 174px;
       padding-bottom: $standard-spacing--small;
       padding-right: $standard-spacing--large;
       padding-top: $standard-spacing--small;

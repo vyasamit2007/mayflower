@@ -3,15 +3,11 @@
     margin-top: $standard-spacing--small;
 
     @media ($bp-small-min) {
-      margin-top: 60px;
-    }
-
-    @media ($bp-medium-min) {
-      margin-top: $standard-spacing--large;
+      margin-top: $standard-spacing--medium;
     }
   }
   @else {
-    margin-top: 30px;
+    margin-top: $standard-spacing--xsmall;
 
     @media ($bp-small-min){
       margin-top: $standard-spacing--small;

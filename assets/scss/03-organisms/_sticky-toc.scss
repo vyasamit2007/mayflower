@@ -1,9 +1,8 @@
 .ma__sticky-toc {
-  margin-bottom: 30px;
-  //position: relative // can't have position relative here or the links won't stick for the height of page-content
+  margin-bottom: $standard-spacing--xsmall;
 
   @media ($bp-small-min) {
-    margin-bottom: 30px;
+    margin-bottom: $standard-spacing--small;
     padding-top: 30px;
   }
 
@@ -28,7 +27,7 @@
     position: relative;
     top: -30px;
 
-    &:after {
+    &::after {
       display: none;
     }
 
@@ -49,7 +48,7 @@
     width: 100%;
     z-index: $z-sticky-content;
 
-    &:before {
+    &::before {
       content: "false"; // hook for JS to do the mobile sticky
       display: none;
     }
@@ -58,7 +57,7 @@
       left: 0;
       padding-left: 0;
 
-      &:before {
+      &::before {
         content: "true"; // hook for JS to do the mobile sticky
       }
 
@@ -217,7 +216,6 @@
       & + & {
         border-top-color: $c-bd-divider;
       }
-
     }
   }
 
@@ -471,7 +469,7 @@
       font-size: 1.375rem;
     }
 
-    &> svg {
+    & > svg {
       display: block;
       margin-top: 7px;
 
